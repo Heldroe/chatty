@@ -3,7 +3,7 @@ name: Publish Docker image
 on:
   push:
     branches:
-      - 'main'
+      - main
 
 jobs:
   push_to_registry:
@@ -24,6 +24,8 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: heldroe/chatty
+          flavor: |
+            latest=true
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
