@@ -13,7 +13,7 @@ parser.add_argument(
     "-f",
     "--frequency",
     type=int,
-    help="log line frequency per second",
+    help="log line frequency (log lines per second)",
     default=5,
 )
 args = parser.parse_args()
